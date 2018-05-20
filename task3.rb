@@ -8,16 +8,12 @@ puts "Укажите третью сторону треугольника:"
 c = gets.to_f
 
 if (b > a) && (b > c)
-  d = a
-  a = b
-  b = d
+  a, b = b, a
 elsif (c > a) && (c > b)
-  d = a
-  a = c
-  c = d
+  a, c = c, a
 end
 
-if (a**2 == b**2 + c**2)
+if a**2 == b**2 + c**2
   if b == c
     puts "Треугольник прямоугольный и равнобедренный"
   else
